@@ -1,6 +1,8 @@
 // Contains Duplicates
+
 use std::collections::HashSet;
 
+// Uses same implemntation as python code
 pub fn contains_duplicates(nums: Vec<i32>) -> bool {
     let mut hashset: HashSet<i32> = HashSet::new();
 
