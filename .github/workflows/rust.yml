@@ -3,8 +3,8 @@ name: Rust Workflow
 on:
   push:
     branches:
-      - main
-      - rust
+      - "main"
+      - "rust"
     paths:
       - '**.rs'
 
