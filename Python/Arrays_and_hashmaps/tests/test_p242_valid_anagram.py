@@ -2,7 +2,7 @@ import os
 import sys
 import pytest
 
-from p214_valid_anagram import Solution
+from p242_valid_anagram import Solution
 
 class Testing:
     def test_example_1(self):
