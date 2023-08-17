@@ -20,21 +20,21 @@ pub mod tests {
     use super::*;
 
     #[test]
-    fn test_1() {
+    fn test_dups_1() {
         let nums = vec![1, 2, 3, 1];
         let result = contains_duplicates(nums);
         assert_eq!(result, true);
     }
 
     #[test]
-    fn test_2() {
+    fn test_dups_2() {
         let nums = vec![1, 2, 3, 4];
         let result = contains_duplicates(nums);
         assert_eq!(result, false);
     }
 
     #[test]
-    fn test_3() {
+    fn test_dups_3() {
         let nums = vec![1, 2, 3, 1, 2, 3, 1, 5, 6, 2, 3];
         let result = contains_duplicates(nums);
         assert_eq!(result, true);
