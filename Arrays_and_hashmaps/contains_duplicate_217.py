@@ -5,8 +5,6 @@ Time Complexity - O(n)
 Space Complexity - o(n)
 """
 from typing import List
-import pytest
-
 class Solution:
     """
     Solution Class
