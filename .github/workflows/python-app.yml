@@ -8,6 +8,8 @@ on:
         branches:
             - "main"
             - "python"
+        paths:
+            - 'Python/**.py'
     pull_request:
         branches: ["main"]
         
