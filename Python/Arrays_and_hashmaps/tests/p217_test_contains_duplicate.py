@@ -3,7 +3,7 @@ import os
 import sys
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from contains_duplicate_217 import Solution
+from p217_contains_duplicate import Solution
 
 class Testing:
     def test_example_1(self):
