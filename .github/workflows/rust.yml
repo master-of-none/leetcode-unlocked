@@ -4,8 +4,14 @@ on:
   push:
     branches:
       - main
+      - rust
     paths:
       - '**.rs'
+
+  pull_request:
+    branches:
+      - main 
+    
 
 jobs:
   build:
