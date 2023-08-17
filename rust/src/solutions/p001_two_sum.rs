@@ -21,7 +21,7 @@ pub mod tests {
     use super::*;
 
     #[test]
-    fn test_1() {
+    fn test_two_sum_1() {
         assert_eq!(vec![0, 1], two_sum(vec![2, 7, 11, 15], 9));
         assert_eq!(vec![1, 2], two_sum(vec![3, 2, 4], 6));
     }
