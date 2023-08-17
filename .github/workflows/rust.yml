@@ -1,12 +1,11 @@
-name: Rust
+name: Rust Workflow
 
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+    paths:
+      - '**.rs'
 
 jobs:
   build:
