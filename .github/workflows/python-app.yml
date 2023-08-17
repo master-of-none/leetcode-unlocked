@@ -5,7 +5,9 @@ name: Python Workflow
 
 on:
     push:
-        branches: ["main"]
+        branches:
+            - main
+            - python
         paths:
             - '**.py'
     pull_request:
