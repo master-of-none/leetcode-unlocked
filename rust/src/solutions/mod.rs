@@ -10,6 +10,7 @@ pub mod p167_two_sum_ii;
 pub mod p217_contains_duplicates;
 pub mod p238_product_of_array;
 pub mod p242_valid_anagram;
+pub mod p020_valid_parantheses;
 
 // Re-export the modules for external use
 //pub use p001_two_sum::*;
