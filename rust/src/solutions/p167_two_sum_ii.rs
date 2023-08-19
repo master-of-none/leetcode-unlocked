@@ -25,7 +25,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_case_1() {
+    fn test_two_sum_ii_1() {
         let numbers = vec![2, 7, 11, 15];
         let target = 9;
         let result = two_sum(numbers.clone(), target);
@@ -33,7 +33,7 @@ mod tests {
     }
 
     #[test]
-    fn test_case_2() {
+    fn test_two_sum_ii_2() {
         let numbers = vec![2, 3, 4];
         let target = 6;
         let result = two_sum(numbers.clone(), target);
@@ -41,7 +41,7 @@ mod tests {
     }
 
     #[test]
-    fn test_case_3() {
+    fn test_two_sum_ii_3() {
         let numbers = vec![-1, 0];
         let target = -1;
         let result = two_sum(numbers.clone(), target);

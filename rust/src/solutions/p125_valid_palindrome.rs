@@ -30,21 +30,21 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_case_1(){
+    fn test_pali_1(){
         let s = "A man, a plan, a canal: Panama";
 
         assert!(is_palindrome(s.to_string()));
     }
 
     #[test]
-    fn test_case_2(){
+    fn test_pali_2(){
         let s = "race a car";
 
         assert!(!is_palindrome(s.to_string()));
     }
 
     #[test]
-    fn test_case_3(){
+    fn test_pali_3(){
         let s = " ";
 
         assert!(is_palindrome(s.to_string()));

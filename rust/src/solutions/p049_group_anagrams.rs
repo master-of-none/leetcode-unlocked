@@ -29,7 +29,7 @@ mod tests {
     }
 
     #[test]
-    fn test_example_1() {
+    fn test_anagram_1() {
         let strs = vec![
             "eat".to_string(),
             "tea".to_string(),
@@ -52,14 +52,14 @@ mod tests {
     }
 
     #[test]
-    fn test_example_2() {
+    fn test_anagram_2() {
         let strs = vec!["".to_string()];
         let expected_output = vec![vec!["".to_string()]];
         assert_eq!(group_anagrams(strs), expected_output);
     }
 
     #[test]
-    fn test_example_3() {
+    fn test_anagram_3() {
         let strs = vec!["a".to_string()];
         let expected_output = vec![vec!["a".to_string()]];
         assert_eq!(group_anagrams(strs), expected_output);

@@ -35,7 +35,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_1() {
+    fn test_sudoku_1() {
         let board: Vec<Vec<char>> = vec![
             vec!['5', '3', '.', '.', '7', '.', '.', '.', '.'],
             vec!['6', '.', '.', '1', '9', '5', '.', '.', '.'],
@@ -52,7 +52,7 @@ mod tests {
     }
 
     #[test]
-    fn test_2() {
+    fn test_sudoku_2() {
         let board: Vec<Vec<char>> = vec![
             vec!['8', '3', '.', '.', '7', '.', '.', '.', '.'],
             vec!['6', '.', '.', '1', '9', '5', '.', '.', '.'],
