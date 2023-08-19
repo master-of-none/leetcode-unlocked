@@ -16,7 +16,7 @@ impl MinStack {
     }
 
     #[allow(dead_code)]
-    fn push(&mut self, val:i32){
+    fn push(&mut self, val: i32) {
         self.stack.push(val);
 
         if let Some(&min_val) = self.min_stack.last() {
