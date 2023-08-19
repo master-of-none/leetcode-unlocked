@@ -1,3 +1,5 @@
+use std::cmp::Ordering;
+
 pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {
     let mut res: Vec<Vec<i32>> = Vec::new();
 
@@ -13,18 +15,21 @@ pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {
 
         while l < r {
             let temp = nums[i] + nums[l] + nums[r];
-
-            if temp < 0 {
-                l += 1;
-            } else if temp > 0 {
-                r -= 1;
-            } else {
-                res.push(vec![nums[i], nums[l], nums[r]]);
-                l += 1;
-                r -= 1;
-
-                while l < r && nums[l] == nums[l - 1] {
+            match temp.cmp(&0) {
+                Ordering::Less => {
                     l += 1;
+                }
+                Ordering::Greater => {
+                    r -= 1;
+                }
+                Ordering::Equal => {
+                    res.push(vec![nums[i], nums[l], nums[r]]);
+                    l += 1;
+                    r -= 1;
+
+                    while l < r && nums[l] == nums[l - 1] {
+                        l += 1;
+                    }
                 }
             }
         }
