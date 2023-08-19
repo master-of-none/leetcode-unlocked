@@ -8,10 +8,8 @@ pub fn valid_sudoku(board: Vec<Vec<char>>) -> bool {
     let mut cols: HashMap<usize, HashSet<char>> = HashMap::new();
     let mut squares: HashMap<(usize, usize), HashSet<char>> = HashMap::new();
 
-    for r in 0..9 {
-        for c in 0..9 {
-            let cell = board[r][c];
-
+    for (r, row) in board.iter().enumerate().take(9) {
+        for (c, &cell) in row.iter().enumerate() {
             if cell == '.' {
                 continue;
             }
