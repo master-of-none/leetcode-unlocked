@@ -1,18 +1,24 @@
 // Two sum sorted
 
+use std::{cmp::Ordering, vec};
+
 pub fn two_sum(numbers: Vec<i32>, target: i32) -> Vec<i32> {
     let mut l = 0;
     let mut r = numbers.len() - 1;
 
     while l < r {
         let temp = numbers[l] + numbers[r];
-
-        if temp < target {
-            l += 1;
-        } else if temp > target {
-            r -= 1;
-        } else {
-            return vec![(l + 1) as i32, (r + 1) as i32];
+        
+        match temp.cmp(&target) {
+            Ordering::Less => {
+                l += 1;
+            }
+            Ordering::Greater => {
+                r -= 1;
+            }
+            Ordering::Equal => {
+                return vec![(l+1) as i32, (r+1) as i32];
+            }
         }
     }
     vec![]
