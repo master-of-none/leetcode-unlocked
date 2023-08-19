@@ -1,8 +1,8 @@
 // Container with Most Wwater
 
-pub fn max_area(height:Vec<i32>) -> i32 {
+pub fn max_area(height: Vec<i32>) -> i32 {
     let mut res: i32 = 0;
-    
+
     let mut l = 0;
     let mut r = height.len() - 1;
 
@@ -10,10 +10,9 @@ pub fn max_area(height:Vec<i32>) -> i32 {
         let area = (r - l) as i32 * std::cmp::min(height[l], height[r]);
         res = res.max(area);
 
-        if height[l] < height[r]{
+        if height[l] < height[r] {
             l += 1;
-        }
-        else {
+        } else {
             r -= 1;
         }
     }

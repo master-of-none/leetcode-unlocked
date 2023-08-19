@@ -9,7 +9,7 @@ pub fn valid_sudoku(board: Vec<Vec<char>>) -> bool {
     let mut squares: HashMap<(usize, usize), HashSet<char>> = HashMap::new();
 
     for r in 0..9 {
-        for c in 0..9{
+        for c in 0..9 {
             let cell = board[r][c];
 
             if cell == '.' {
@@ -18,13 +18,20 @@ pub fn valid_sudoku(board: Vec<Vec<char>>) -> bool {
 
             if rows.entry(r).or_insert(HashSet::new()).contains(&cell)
                 || cols.entry(c).or_insert(HashSet::new()).contains(&cell)
-                || squares.entry((r / 3, c / 3)).or_insert(HashSet::new()).contains(&cell) {
-                    return false;
-                }
-            
+                || squares
+                    .entry((r / 3, c / 3))
+                    .or_insert(HashSet::new())
+                    .contains(&cell)
+            {
+                return false;
+            }
+
             rows.entry(r).or_insert(HashSet::new()).insert(cell);
             cols.entry(c).or_insert(HashSet::new()).insert(cell);
-            squares.entry((r / 3, c / 3)).or_insert(HashSet::new()).insert(cell);
+            squares
+                .entry((r / 3, c / 3))
+                .or_insert(HashSet::new())
+                .insert(cell);
         }
     }
     true

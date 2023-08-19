@@ -1,10 +1,10 @@
-pub fn three_sum(nums:Vec<i32>) -> Vec<Vec<i32>>{
+pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {
     let mut res: Vec<Vec<i32>> = Vec::new();
 
     let mut nums = nums.clone();
     nums.sort();
 
-    for i in 0..nums.len(){
+    for i in 0..nums.len() {
         if i > 0 && nums[i] == nums[i - 1] {
             continue;
         }
@@ -16,21 +16,17 @@ pub fn three_sum(nums:Vec<i32>) -> Vec<Vec<i32>>{
 
             if temp < 0 {
                 l += 1;
-            }
-            else if temp > 0 {
+            } else if temp > 0 {
                 r -= 1;
-            }
-            else {
+            } else {
                 res.push(vec![nums[i], nums[l], nums[r]]);
                 l += 1;
                 r -= 1;
 
-                while l < r && nums[l] == nums[l - 1]{
+                while l < r && nums[l] == nums[l - 1] {
                     l += 1;
                 }
-
             }
-
         }
     }
     res

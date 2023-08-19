@@ -5,13 +5,11 @@ pub fn group_anagrams(strs: Vec<String>) -> Vec<Vec<String>> {
 
     for s in strs.iter() {
         let mut count = vec![0; 26];
-        
+
         for c in s.chars() {
             count[(c as u8 - b'a') as usize] += 1
-
         }
         res.entry(count).or_insert(Vec::new()).push(s.clone());
-
     }
     res.values().cloned().collect()
 }
@@ -43,7 +41,7 @@ mod tests {
             vec!["nat".to_string(), "tan".to_string()],
             vec!["ate".to_string(), "eat".to_string(), "tea".to_string()],
         ];
-        
+
         let mut result = group_anagrams(strs);
         result = sort_string_vecs(result);
         expected_output = sort_string_vecs(expected_output);

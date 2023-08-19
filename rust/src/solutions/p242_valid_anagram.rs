@@ -2,13 +2,13 @@
 use std::collections::HashMap;
 
 pub fn is_anagram(s: String, t: String) -> bool {
-    if s.len() != t.len(){
+    if s.len() != t.len() {
         return false;
     }
     let mut count_s: HashMap<char, i32> = HashMap::new();
     let mut count_t: HashMap<char, i32> = HashMap::new();
 
-    for i in 0..s.len(){
+    for i in 0..s.len() {
         *count_s.entry(s.chars().nth(i).unwrap()).or_insert(0) += 1;
         *count_t.entry(t.chars().nth(i).unwrap()).or_insert(0) += 1;
     }

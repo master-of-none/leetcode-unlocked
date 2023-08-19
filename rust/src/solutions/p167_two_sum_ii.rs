@@ -1,6 +1,6 @@
 // Two sum sorted
 
-pub fn two_sum(numbers: Vec<i32>, target:i32) -> Vec<i32> {
+pub fn two_sum(numbers: Vec<i32>, target: i32) -> Vec<i32> {
     let mut l = 0;
     let mut r = numbers.len() - 1;
 
@@ -9,12 +9,10 @@ pub fn two_sum(numbers: Vec<i32>, target:i32) -> Vec<i32> {
 
         if temp < target {
             l += 1;
-        }
-        else if temp > target {
+        } else if temp > target {
             r -= 1;
-        }
-        else {
-            return vec![(l+1) as i32, (r+1) as i32];
+        } else {
+            return vec![(l + 1) as i32, (r + 1) as i32];
         }
     }
     vec![]
