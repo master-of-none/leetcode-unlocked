@@ -3,7 +3,7 @@ import os
 import sys
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from two_sum_II_sorted import Solution
+from p167_two_sum_II_sorted import Solution
 
 class Testing:
     def test_example_1(self):
