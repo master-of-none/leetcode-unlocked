@@ -23,20 +23,20 @@ pub mod tests {
     fn test_dups_1() {
         let nums = vec![1, 2, 3, 1];
         let result = contains_duplicates(nums);
-        assert_eq!(result, true);
+        assert!(result);
     }
 
     #[test]
     fn test_dups_2() {
         let nums = vec![1, 2, 3, 4];
         let result = contains_duplicates(nums);
-        assert_eq!(result, false);
+        assert!(!result);
     }
 
     #[test]
     fn test_dups_3() {
         let nums = vec![1, 2, 3, 1, 2, 3, 1, 5, 6, 2, 3];
         let result = contains_duplicates(nums);
-        assert_eq!(result, true);
+        assert!(result);
     }
 }

@@ -8,23 +8,28 @@ pub fn valid_sudoku(board: Vec<Vec<char>>) -> bool {
     let mut cols: HashMap<usize, HashSet<char>> = HashMap::new();
     let mut squares: HashMap<(usize, usize), HashSet<char>> = HashMap::new();
 
-    for r in 0..9 {
-        for c in 0..9{
-            let cell = board[r][c];
-
+    for (r, row) in board.iter().enumerate().take(9) {
+        for (c, &cell) in row.iter().enumerate() {
             if cell == '.' {
                 continue;
             }
 
             if rows.entry(r).or_insert(HashSet::new()).contains(&cell)
                 || cols.entry(c).or_insert(HashSet::new()).contains(&cell)
-                || squares.entry((r / 3, c / 3)).or_insert(HashSet::new()).contains(&cell) {
-                    return false;
-                }
-            
+                || squares
+                    .entry((r / 3, c / 3))
+                    .or_insert(HashSet::new())
+                    .contains(&cell)
+            {
+                return false;
+            }
+
             rows.entry(r).or_insert(HashSet::new()).insert(cell);
             cols.entry(c).or_insert(HashSet::new()).insert(cell);
-            squares.entry((r / 3, c / 3)).or_insert(HashSet::new()).insert(cell);
+            squares
+                .entry((r / 3, c / 3))
+                .or_insert(HashSet::new())
+                .insert(cell);
         }
     }
     true
@@ -35,7 +40,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_1() {
+    fn test_sudoku_1() {
         let board: Vec<Vec<char>> = vec![
             vec!['5', '3', '.', '.', '7', '.', '.', '.', '.'],
             vec!['6', '.', '.', '1', '9', '5', '.', '.', '.'],
@@ -48,11 +53,11 @@ mod tests {
             vec!['.', '.', '.', '.', '8', '.', '.', '7', '9'],
         ];
 
-        assert_eq!(valid_sudoku(board), true);
+        assert!(valid_sudoku(board));
     }
 
     #[test]
-    fn test_2() {
+    fn test_sudoku_2() {
         let board: Vec<Vec<char>> = vec![
             vec!['8', '3', '.', '.', '7', '.', '.', '.', '.'],
             vec!['6', '.', '.', '1', '9', '5', '.', '.', '.'],
@@ -65,6 +70,6 @@ mod tests {
             vec!['.', '.', '.', '.', '8', '.', '.', '7', '9'],
         ];
 
-        assert_eq!(valid_sudoku(board), false);
+        assert!(!valid_sudoku(board));
     }
 }
