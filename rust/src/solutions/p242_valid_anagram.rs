@@ -24,13 +24,13 @@ mod tests {
     fn test_anagram_1() {
         let s = String::from("anagram");
         let t = String::from("nagaram");
-        assert_eq!(is_anagram(s, t), true);
+        assert!(is_anagram(s, t));
     }
 
     #[test]
     fn test_anagram_2() {
         let s = String::from("rat");
         let t = String::from("car");
-        assert_eq!(is_anagram(s, t), false);
+        assert!(!is_anagram(s, t));
     }
 }

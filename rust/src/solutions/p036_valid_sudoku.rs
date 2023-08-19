@@ -55,7 +55,7 @@ mod tests {
             vec!['.', '.', '.', '.', '8', '.', '.', '7', '9'],
         ];
 
-        assert_eq!(valid_sudoku(board), true);
+        assert!(valid_sudoku(board));
     }
 
     #[test]
@@ -72,6 +72,6 @@ mod tests {
             vec!['.', '.', '.', '.', '8', '.', '.', '7', '9'],
         ];
 
-        assert_eq!(valid_sudoku(board), false);
+        assert!(!valid_sudoku(board));
     }
 }

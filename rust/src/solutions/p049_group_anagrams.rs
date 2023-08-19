@@ -22,7 +22,7 @@ mod tests {
         for vec in vecs.iter_mut() {
             vec.sort(); // Sort the strings within each group
         }
-        vecs.sort_by(|a, b| a.join("").cmp(&b.join(""))); // Sort the groups
+        vecs.sort_by_key(|a| a.join("")); // Sort the groups
         vecs
     }
 
