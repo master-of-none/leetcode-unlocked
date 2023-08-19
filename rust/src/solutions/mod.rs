@@ -11,6 +11,7 @@ pub mod p217_contains_duplicates;
 pub mod p238_product_of_array;
 pub mod p242_valid_anagram;
 pub mod p020_valid_parantheses;
+pub mod p155_min_stack;
 
 // Re-export the modules for external use
 //pub use p001_two_sum::*;
