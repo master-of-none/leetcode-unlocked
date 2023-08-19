@@ -8,7 +8,7 @@ pub fn two_sum(numbers: Vec<i32>, target: i32) -> Vec<i32> {
 
     while l < r {
         let temp = numbers[l] + numbers[r];
-        
+
         match temp.cmp(&target) {
             Ordering::Less => {
                 l += 1;
@@ -17,7 +17,7 @@ pub fn two_sum(numbers: Vec<i32>, target: i32) -> Vec<i32> {
                 r -= 1;
             }
             Ordering::Equal => {
-                return vec![(l+1) as i32, (r+1) as i32];
+                return vec![(l + 1) as i32, (r + 1) as i32];
             }
         }
     }
