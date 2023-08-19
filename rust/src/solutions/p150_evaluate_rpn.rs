@@ -28,9 +28,7 @@ pub fn eval_rpn(tokens: Vec<String>) -> i32 {
                 let b = stack.pop().unwrap();
                 stack.push(b / a);
             }
-            _ => {
-                stack.push(c.parse::<i32>().unwrap())
-            }
+            _ => stack.push(c.parse::<i32>().unwrap()),
         }
     }
 
@@ -47,19 +45,21 @@ mod tests {
 
     #[test]
     fn test_eval_rpn_1() {
-        let tokens: Vec<String> = into_owned_strings(vec!["2","1","+","3","*"]);
-        assert_eq!(eval_rpn(tokens),9)
+        let tokens: Vec<String> = into_owned_strings(vec!["2", "1", "+", "3", "*"]);
+        assert_eq!(eval_rpn(tokens), 9)
     }
 
     #[test]
     fn test_eval_rpn_2() {
-        let tokens: Vec<String> = into_owned_strings(vec!["4","13","5","/","+"]);
-        assert_eq!(eval_rpn(tokens),6)
+        let tokens: Vec<String> = into_owned_strings(vec!["4", "13", "5", "/", "+"]);
+        assert_eq!(eval_rpn(tokens), 6)
     }
 
     #[test]
     fn test_eval_rpn_3() {
-        let tokens: Vec<String> = into_owned_strings(vec!["10","6","9","3","+","-11","*","/","*","17","+","5","+"]);
-        assert_eq!(eval_rpn(tokens),22)
+        let tokens: Vec<String> = into_owned_strings(vec![
+            "10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+",
+        ]);
+        assert_eq!(eval_rpn(tokens), 22)
     }
 }
