@@ -7,6 +7,7 @@ pub mod p042_trapping_rain_water;
 pub mod p049_group_anagrams;
 pub mod p125_valid_palindrome;
 pub mod p128_longest_consecutive_sequence;
+pub mod p150_evaluate_rpn;
 pub mod p155_min_stack;
 pub mod p167_two_sum_ii;
 pub mod p217_contains_duplicates;
