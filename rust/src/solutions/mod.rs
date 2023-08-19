@@ -2,6 +2,7 @@ pub mod p001_two_sum;
 pub mod p011_container_water;
 pub mod p015_3sum;
 pub mod p036_valid_sudoku;
+pub mod p042_trapping_rain_water;
 pub mod p049_group_anagrams;
 pub mod p125_valid_palindrome;
 pub mod p128_longest_consecutive_sequence;
