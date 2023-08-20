@@ -1,8 +1,8 @@
 from list_node import ListNode
 from p206_reverse_list import Solution
-import pytest
-import sys
 import os
+import sys
+import pytest
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
