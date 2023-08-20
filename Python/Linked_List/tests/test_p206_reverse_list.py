@@ -1,13 +1,10 @@
-from list_node import ListNode
-from p206_reverse_list import Solution
 import os
 import sys
 import pytest
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
-
+from list_node import ListNode
+from p206_reverse_list import Solution
 class TestSolution:
-
     def test_reverse_list_1(self):
         solution = Solution()
         input_list = [1, 2, 3, 4, 5]
