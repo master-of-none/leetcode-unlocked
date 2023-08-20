@@ -10,7 +10,7 @@ class TestSolution:
         input_list = [1, 2, 3, 4, 5]
         expected_list = [5, 4, 3, 2, 1]
 
-        input_head = ListNode.list_linked_list(input_list)
+        input_head = ListNode.list_to_linked_list(input_list)
 
         actual_head = solution.reverse_list(input_head)
         actual_list = ListNode.linked_list_to_list(actual_head)
@@ -22,7 +22,7 @@ class TestSolution:
         input_list = [1, 2]
         expected_list = [2, 1]
 
-        input_head = ListNode.list_linked_list(input_list)
+        input_head = ListNode.list_to_linked_list(input_list)
 
         actual_head = solution.reverse_list(input_head)
         actual_list = ListNode.linked_list_to_list(actual_head)
@@ -34,7 +34,7 @@ class TestSolution:
         input_list = []
         expected_list = []
 
-        input_head = ListNode.list_linked_list(input_list)
+        input_head = ListNode.list_to_linked_list(input_list)
 
         actual_head = solution.reverse_list(input_head)
         actual_list = ListNode.linked_list_to_list(actual_head)

@@ -9,7 +9,7 @@ class ListNode:
         self.next = new_node
     
     @staticmethod
-    def list_linked_list(lst):
+    def list_to_linked_list(lst):
         if not lst:
             return None
         
