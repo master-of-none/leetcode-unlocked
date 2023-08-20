@@ -1,4 +1,4 @@
-from typing import Optional, Self
+# from typing import Optional, Self
 class ListNode:
     def __init__(self, val=0, next=None) -> None:
         self.val = val
@@ -9,15 +9,15 @@ class ListNode:
         new_node.next = self.next
         self.next = new_node
 
-    @classmethod
-    def from_list(cls, list_) -> Optional[Self]:
-        if not list_:
-            return None
+    # @classmethod
+    # def from_list(cls, list_) -> Optional[Self]:
+    #     if not list_:
+    #         return None
 
-        if len(list_) == 1:
-            return cls(list_[0], None)
+    #     if len(list_) == 1:
+    #         return cls(list_[0], None)
 
-        return cls(list_[0], cls.from_list(list_[1:]))
+    #     return cls(list_[0], cls.from_list(list_[1:]))
     
     @staticmethod
     def list_to_linked_list(lst):
