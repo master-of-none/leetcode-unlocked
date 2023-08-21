@@ -1,4 +1,5 @@
 // Binary Search
+use std::cmp::Ordering;
 
 pub fn search(nums: Vec<i32>, target: i32) -> i32 {
     let mut l = 0;
@@ -7,15 +8,10 @@ pub fn search(nums: Vec<i32>, target: i32) -> i32 {
     while l <= r {
         let mid = l + (r - l) / 2;
 
-        if nums[mid] < target{
-            l = mid + 1
-        }
-        else if nums[mid] > target {
-            r = mid - 1
-        }
-
-        else if nums[mid] == target {
-            return mid.try_into().unwrap();
+        match nums[mid].cmp(&target) {
+            Ordering::Less => l = mid + 1,
+            Ordering::Greater => r = mid - 1,
+            Ordering::Equal => return mid.try_into().unwrap(),
         }
     }
 
