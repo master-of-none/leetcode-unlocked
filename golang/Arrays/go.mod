@@ -1,3 +1,3 @@
-module contains_duplicate
+module arrays
 
 go 1.21.0
