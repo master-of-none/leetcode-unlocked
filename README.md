@@ -1,3 +1,4 @@
 # leetcode-unlocked
 LeetCode questions solved with test cases written manually and implemented CI/CD Pipeline <br>
-Currently Implemented with Python and Rust
+Currently Implementing with Python and Rust ✅<br>
+Solutions with Go are on the way 🏁 ...... 🏎️💨
