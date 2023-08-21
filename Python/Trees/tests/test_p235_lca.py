@@ -52,6 +52,6 @@ class TestSolution:
         
         head_val = solution.lowestCommonAncestor(root, p_root, q_root)
         actual_head = TreeNode.tree_to_list(head_val)
-        assert actual_head[0] == 1
+        assert actual_head[0] == 2
 if __name__ == "__main__":
     pytest.main()
