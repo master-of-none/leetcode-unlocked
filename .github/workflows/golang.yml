@@ -18,15 +18,10 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-
-      - name: Print Directory Structure
-        run: |
-          pwd
-          ls -R
           
       - name: Change permission of script
         run: |
-          chmod +x golang.sh 
+          chmod +x .github/workflows/golang.sh
 
       - name: Install Go
         uses: actions/setup-go@v2
@@ -35,4 +30,4 @@ jobs:
 
       - name: Run Go Tests
         run: |
-          ./golang.sh
+          ./.github/workflows/golang.sh
