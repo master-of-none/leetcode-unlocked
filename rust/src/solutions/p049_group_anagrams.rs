@@ -42,21 +42,13 @@ mod tests {
 
     #[test]
     fn test_example_1() {
-        let strs = into_owned_strings(vec![
-            "eat",
-            "tea",
-            "tan",
-            "ate",
-            "nat",
-            "bat",
-        ]);
+        let strs = into_owned_strings(vec!["eat", "tea", "tan", "ate", "nat", "bat"]);
 
-        let mut expected_output = vec![
-            vec!["bat"],
-            vec!["nat", "tan"],
-            vec!["ate", "eat", "tea"],
-        ].into_iter().map(into_owned_strings).collect();
-        
+        let mut expected_output = vec![vec!["bat"], vec!["nat", "tan"], vec!["ate", "eat", "tea"]]
+            .into_iter()
+            .map(into_owned_strings)
+            .collect();
+
         let mut result = group_anagrams(strs);
 
         sort_string_vecs(&mut result);

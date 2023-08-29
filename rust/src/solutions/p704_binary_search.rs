@@ -37,5 +37,4 @@ mod tests {
         let target = 2;
         assert_eq!(search(nums, target), -1);
     }
-
 }
