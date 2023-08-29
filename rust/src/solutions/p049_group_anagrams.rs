@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 const LETTER_COUNT: usize = 26;
 
-fn build_char_frequency(word: &String) -> [u8; LETTER_COUNT] {
+fn build_char_frequency(word: &str) -> [u8; LETTER_COUNT] {
     word.bytes()
         .map(|b| (b - b'a') as usize)
         .fold([0; LETTER_COUNT], |mut freq, b| {
@@ -42,21 +42,13 @@ mod tests {
 
     #[test]
     fn test_example_1() {
-        let strs = into_owned_strings(vec![
-            "eat",
-            "tea",
-            "tan",
-            "ate",
-            "nat",
-            "bat",
-        ]);
+        let strs = into_owned_strings(vec!["eat", "tea", "tan", "ate", "nat", "bat"]);
 
-        let mut expected_output = vec![
-            vec!["bat"],
-            vec!["nat", "tan"],
-            vec!["ate", "eat", "tea"],
-        ].into_iter().map(into_owned_strings).collect();
-        
+        let mut expected_output = vec![vec!["bat"], vec!["nat", "tan"], vec!["ate", "eat", "tea"]]
+            .into_iter()
+            .map(into_owned_strings)
+            .collect();
+
         let mut result = group_anagrams(strs);
 
         sort_string_vecs(&mut result);
