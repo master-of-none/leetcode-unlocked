@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 const LETTER_COUNT: usize = 26;
 
-fn build_char_frequency(word: &String) -> [u8; LETTER_COUNT] {
+fn build_char_frequency(word: &str) -> [u8; LETTER_COUNT] {
     word.bytes()
         .map(|b| (b - b'a') as usize)
         .fold([0; LETTER_COUNT], |mut freq, b| {
