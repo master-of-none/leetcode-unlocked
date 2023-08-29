@@ -16,6 +16,7 @@ pub mod p238_product_of_array;
 pub mod p242_valid_anagram;
 pub mod p739_daily_temp;
 pub mod p704_binary_search;
+pub mod p074_2d_matrix;
 
 // Re-export the modules for external use
 //pub use p001_two_sum::*;
