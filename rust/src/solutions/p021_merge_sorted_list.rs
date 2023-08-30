@@ -4,24 +4,26 @@ pub fn merge_two_lists(
     list1: Option<Box<ListNode>>,
     list2: Option<Box<ListNode>>,
 ) -> Option<Box<ListNode>> {
-    let mut dummy = Box::new(ListNode::new(0));
-    let mut cur = &mut dummy;
+}
 
-    let (mut l1, mut l2) = (list1, list2);
+#[cfg(test)]
+mod tests {
+    use std::vec;
 
-    while let (Some(mut node1), Some(mut node2)) = (l1.take(), l2.take()) {
-        if node1.val < node2.val {
-            let next_node = node1.next.take();
-            cur.next = Some(node1);
-            l1 = next_node;
-        } else {
-            let next_node = node2.next.take();
-            cur.next = Some(node2);
-            l2 = next_node;
-        }
-        cur = cur.next.as_mut().unwrap();
+    use super::*;
+
+    #[test]
+    fn test_merge_1() {
+        let list1_vec: Vec<i32> = vec![1, 2, 4];
+        let list2_vec: Vec<i32> = vec![1, 3, 4];
+        let output_vec: Vec<i32> = vec![1, 1, 2, 3, 4, 4];
+
+        let list1_head = ListNode::to_linked_list(list1_vec);
+        let list2_head = ListNode::to_linked_list(list2_vec);
+
+        let actual_head = merge_two_lists(list1_head, list2_head);
+        let actual_vec = ListNode::to_vector(actual_head);
+
+        assert_eq!(actual_vec, output_vec);
     }
-
-    cur.next = l1.or(l2);
-    dummy.next
 }
