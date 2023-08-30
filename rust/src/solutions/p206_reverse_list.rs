@@ -30,4 +30,32 @@ mod tests {
 
         assert_eq!(actual_vector, output_vector)
     }
+
+    #[test]
+    fn test_reverse_2() {
+        let input_vector: Vec<i32> = vec![1, 2];
+        let output_vector: Vec<i32> = vec![2, 1];
+
+        let input_head = ListNode::to_linked_list(input_vector);
+
+        let output_head = reverse_list(input_head);
+
+        let actual_vector = ListNode::to_vector(output_head);
+
+        assert_eq!(actual_vector, output_vector)
+    }
+
+    #[test]
+    fn test_reverse_3() {
+        let input_vector: Vec<i32> = vec![];
+        let output_vector: Vec<i32> = vec![];
+
+        let input_head = ListNode::to_linked_list(input_vector);
+
+        let output_head = reverse_list(input_head);
+
+        let actual_vector = ListNode::to_vector(output_head);
+
+        assert_eq!(actual_vector, output_vector)
+    }
 }
