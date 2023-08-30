@@ -3,6 +3,7 @@ pub mod p003_longest_substring;
 pub mod p011_container_water;
 pub mod p015_3sum;
 pub mod p020_valid_parantheses;
+pub mod p021_merge_sorted_list;
 pub mod p022_generate_parantheses;
 pub mod p036_valid_sudoku;
 pub mod p042_trapping_rain_water;
