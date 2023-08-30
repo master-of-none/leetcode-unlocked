@@ -14,6 +14,7 @@ pub mod p128_longest_consecutive_sequence;
 pub mod p150_evaluate_rpn;
 pub mod p155_min_stack;
 pub mod p167_two_sum_ii;
+pub mod p206_reverse_list;
 pub mod p217_contains_duplicates;
 pub mod p238_product_of_array;
 pub mod p242_valid_anagram;

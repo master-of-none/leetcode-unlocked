@@ -1,7 +1,7 @@
 #[derive(Debug, PartialEq)]
 pub struct ListNode {
-    val: i32,
-    next: Option<Box<ListNode>>,
+    pub val: i32,
+    pub next: Option<Box<ListNode>>,
 }
 
 impl ListNode {
