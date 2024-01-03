@@ -1,6 +1,6 @@
 go 1.21.0
 
-use (
-	./golang/Arrays
-	./golang/Two_Pointers
-)
+// use (
+// 	./golang/Arrays
+// 	./golang/Two_Pointers
+// )
