@@ -166,7 +166,7 @@ cython_debug/
 
 .idea/
 cmake-build-debug/
-
+cmake-build-debug-coverage/
 # Prerequisites
 *.d
 
