@@ -5,4 +5,4 @@ project(arrays VERSION 1.0)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_executable(arrays <>)
+add_executable(arrays containsDuplicate.cpp)
