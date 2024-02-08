@@ -7,3 +7,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_executable(containsDuplicate containsDuplicate.cpp)
 add_executable(validAnagram validAnagram.cpp)
+add_executable(twoSum twoSum.cpp)
